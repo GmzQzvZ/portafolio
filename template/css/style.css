@@ -203,6 +203,8 @@ a:hover {
   justify-content: center;
   gap: 1.2rem;
   margin: 1.8rem 0 3rem;
+  position: relative;
+  z-index: 999;
 }
 
 .social-link {
@@ -217,6 +219,8 @@ a:hover {
   justify-content: center;
   border: 1px solid rgba(255,255,255,0.09);
   transition: all 0.3s ease;
+    position: relative;
+  z-index: 1000;
 }
 
 .social-link:hover {
