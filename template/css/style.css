@@ -238,6 +238,17 @@ a:hover {
   display: none;
 }
 
+.offcanvas-btn i {
+    font-size: 30px;
+    color: var(--body-text-color);
+    transition: color 0.3s ease;
+}
+
+.offcanvas-btn:hover i {
+    color: var(--accent-color);
+}
+
+
 /* Contenido principal deja espacio para sidebar */
 .main-content {
   margin-right: 340px;
@@ -468,4 +479,18 @@ a:hover {
   h1, .h1 { font-size: 3rem; }
   .lead-paragraph { font-size: 1.15rem; }
   .skills-list { grid-template-columns: 1fr; }
+}
+
+/* ───────────────────────────────────────────────
+   Off-Canvas Mobile Menu
+───────────────────────────────────────────────── */
+.offcanvas-body {
+    background-color: var(--secondary-color);
+    color: var(--body-text-color);
+}
+
+.offcanvas-header {
+    background-color: var(--secondary-color);
+    color: var(--body-text-color);
+    border-bottom: 1px solid var(--grey-color);
 }
