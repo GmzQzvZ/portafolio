@@ -13,18 +13,26 @@
     <meta name="description" content="Portafolio de Juan Sebastián Gómez Quiñones. Desarrollador Web App. Proyectos con Node.js, JavaScript, PHP, MySQL y automatización con APIs.">
     <meta name="author" content="Sebastián Gómez">
 
+    <!-- SEO extras -->
+    <link rel="canonical" href="https://gmzqzv.github.io/portafolio/">
+    <meta name="keywords"
+        content="Sebastián Gómez, desarrollador web, automatización, Node.js, portafolio, apps web, Bogotá">
+    <meta name="robots" content="index,follow">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Sebastián Gómez - Desarrollador Web App">
     <meta property="og:description" content="Portafolio, experiencia y proyectos. Desarrollo web, automatización y soluciones a medida.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="images/sin.png">
+    <meta property="og:url" content="https://gmzqzv.github.io/portafolio/">
+    <meta property="og:image" content="images/whatsappbot.jpg">
+    <meta property="og:locale" content="es_ES">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gmzqzv.github.io/portafolio/">
     <meta name="twitter:title" content="Sebastián Gómez - Desarrollador Web App">
     <meta name="twitter:description" content="Portafolio, experiencia y proyectos. Desarrollo web, automatización y soluciones a medida.">
-    <meta name="twitter:image" content="images/sin.png">
+    <meta name="twitter:image" content="images/whatsappbot.jpg">
 
     <!-- CSS: Bootstrap, Tabler Icons, AOS, Fonts, App -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,9 +52,6 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <!-- script	================================================== -->
-    <script src="../js/modernizr.js"></script>
 
 </head>
 
@@ -119,6 +124,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="#services" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                                aria-label="Servicios" data-bs-original-title="Servicios">
+                                <i class="ti ti-briefcase"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#resume" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                                 aria-label="Resumen" data-bs-original-title="Resumen">
                                 <i class="ti ti-school"></i>
@@ -127,7 +138,7 @@
                         <li>
                             <a href="#portfolio" class="nav-link rounded-0" data-bs-toggle="tooltip"
                                 data-bs-placement="right" aria-label="Portafolio" data-bs-original-title="Portafolio">
-                                <i class="ti ti-briefcase"></i>
+                                <i class="ti ti-brand-github"></i>
                             </a>
                         </li>
                         <li>
@@ -150,7 +161,7 @@
                                 <div class="col-lg-10 mx-auto">
                                     <p class="lead-paragraph mb-4">Desarrollador de Software Junior | Estudiante de Ingeniería de Software</p>
                                 </div>
-                                <p class="lead-paragraph mb-4">Desarrollador Web App apasionado por la tecnología, automatización e innovación digital. Creo soluciones prácticas con Node.js, JavaScript y WhatsApp Business API.</p>
+                                <!-- <p class="lead-paragraph mb-4">Desarrollador Web App apasionado por la tecnología, automatización e innovación digital. Creo soluciones prácticas con Node.js, JavaScript y WhatsApp Business API.</p> -->
                                 <div class=" gap-2 d-sm-flex justify-content-sm-center">
                                     <a href="#contact" class="btn btn-primary btn-lg mt-3">Contactarme</a>
                                 </div>
@@ -191,70 +202,60 @@
                     
                     <hr class="mid-break my-2"> <!--linea divisoria -->
 
-<div class="py-4 my-4">
-    <h2 class="fw-bold pt-4 pb-5">Servicios</h2>
+                    <section id="services" class="services-section" role="region" aria-label="Servicios destacados">
+                        <div class="py-4 my-4">
+                            <h2 class="fw-bold pt-4 pb-5">Servicios</h2>
 
-    <div class="row row-cols-1 row-cols-sm-2">
+                            <div class="service-grid" aria-label="Servicios destacados">
+                                <article class="service-card" data-aos="fade-up">
+                                    <div class="service-icon" aria-hidden="true">
+                                        <i class="ti ti-device-imac-code"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-2">Desarrollo Web</h4>
+                                    <p>
+                                        Desarrollo aplicaciones web completas y mantenibles con JavaScript, Node.js y CSS,
+                                        cuidando UX, velocidad y accesibilidad.
+                                    </p>
+                                    <a href="https://github.com/GmzQzvZ" class="btn btn-outline-primary btn-sm mt-auto"
+                                       target="_blank" rel="noopener noreferrer">
+                                        Ver proyectos
+                                    </a>
+                                </article>
 
-        <div class="col d-flex align-items-start pb-5">
-            <div>
-                <i class="ti ti-device-imac-code"></i>
-                <h4 class="fw-bold mb-0">Desarrollo Web</h4>
-                <p class="mb-1">
-                    Desarrollo de aplicaciones web modernas, escalables y eficientes 
-                    utilizando JavaScript, Node.js, HTML y CSS.
-                </p>
-                <a href="https://github.com/GmzQzvZ" class="btn btn-outline-primary btn-sm mt-1" target="_blank" rel="noopener noreferrer">
-                    Ver proyectos en GitHub
-                </a>
-            </div>
-        </div>
+                                <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="service-icon" aria-hidden="true">
+                                        <i class="ti ti-layout-grid"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-2">Automatización &amp; Sistemas</h4>
+                                    <p>
+                                        Integro workflows automáticos y sistemas a medida que eliminan tareas repetitivas y
+                                        unifican procesos críticos, siempre con soporte técnico.
+                                    </p>
+                                    <a href="https://github.com/GmzQzvZ/facturas_js"
+                                       class="btn btn-outline-primary btn-sm mt-auto"
+                                       target="_blank" rel="noopener noreferrer">
+                                        Ver sistema
+                                    </a>
+                                </article>
 
-        <div class="col d-flex align-items-start pb-5">
-    <div>
-        <i class="ti ti-settings-automation"></i>
-        <h4 class="fw-bold mb-0">Automatización de Procesos</h4>
-        <p class="mb-1">
-            Optimización de tareas repetitivas mediante scripts y soluciones digitales
-            que mejoran la eficiencia y reducen errores operativos.
-        </p>
-        <a href="https://github.com/GmzQzvZ" class="btn btn-outline-primary btn-sm mt-1" target="_blank" rel="noopener noreferrer">
-            Ver soluciones
-        </a>
-    </div>
-</div>
+                                <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="service-icon" aria-hidden="true">
+                                        <i class="ti ti-headset"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-2">Consultoría Técnica</h4>
+                                    <p>
+                                        Acompaño equipos y líderes con asesoría estratégica, pruebas técnicas y
+                                        acompañamiento en implementaciones seguras.
+                                    </p>
+                                    <a href="https://wa.me/573229520608"
+                                       class="btn btn-outline-primary btn-sm mt-auto"
+                                       target="_blank" rel="noopener noreferrer">
+                                        Contactar por WhatsApp
+                                    </a>
+                                </article>
 
-
-        <div class="col d-flex align-items-start pb-5">
-            <div>
-                <i class="ti ti-sitemap"></i>
-                <h4 class="fw-bold mb-0">Desarrollo de Sistemas</h4>
-                <p class="mb-1">
-                    Creación de sistemas completos a la medida para gestión, control y 
-                    optimización de procesos empresariales.
-                </p>
-                <a href="https://github.com/GmzQzvZ/facturas_js" class="btn btn-outline-primary btn-sm mt-1" target="_blank" rel="noopener noreferrer">
-                    Ver sistema
-                </a>
-            </div>
-        </div>
-
-        <div class="col d-flex align-items-start pb-5">
-            <div>
-                <i class="ti ti-user-search"></i>
-                <h4 class="fw-bold mb-0">Consultoría Técnica</h4>
-                <p class="mb-1">
-                    Asesoría técnica en automatización, mejora digital y soluciones 
-                    prácticas enfocadas en resultados reales.
-                </p>
-                <a href="https://wa.me/573229520608" class="btn btn-outline-primary btn-sm mt-1" target="_blank" rel="noopener noreferrer">
-                    Contactar por WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
+                            </div>
+                        </div>
                     </section>
 
                     <section id="resume">
@@ -346,60 +347,27 @@
                         </div>
     </section>
 
-    <!-- Portfolio Section -->
-<section id="portfolio" class="portfolio-grid-container">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h1 class="fw-bold">Portafolio</h1>
-            <p class="text">Encontrarás aquí algunos de mis proyectos</p>
-        </div>
+<section id="portfolio" class="github-section">
+  <div class="container">
+          <h1 class="fw-bold mt-5 mb-1">Portafolio</h1>
+      <p class="lead-paragraph mb-3">
+        Este portafolio se actualiza con lo último de mi perfil
+        <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"
+           class="github-link">GitHub</a>.
+      </p>
+    <div class="github-section__inner py-4 my-4">
 
-        <div class="portfolio-grid">
-            <!-- Project 1 -->
-            <div class="portfolio-item">
-                <a href="" target="_blank" rel="noopener noreferrer" class="image-link">
-                    <img class="portfolio-img" src="images/whatsappbot.jpg" alt="Bot de WhatsApp para peluquería">
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">En Construccion</span>
-                        <h3 class="portfolio-title">Bot WhatsApp Peluquería</h3>
-                    </div>
-                </a>
-            </div>
+      <div id="githubSummary" class="github-summary small text-muted" aria-live="polite">
+        Cargando resumen del perfil...
+      </div>
 
-            <!-- Project 2 -->
-            <div class="portfolio-item">
-                <a href="https://github.com/GmzQzvZ/facturas_js" target="_blank" rel="noopener noreferrer" class="image-link">
-                    <img class="portfolio-img" src="images/crm.jpg" alt="CRM con módulo de facturación">
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Web</span>
-                        <h3 class="portfolio-title">CRM con Facturación</h3>
-                    </div>
-                </a>
-            </div>
+      <div id="githubRepos" class="row row-cols-1 row-cols-md-2 g-4 mt-3" aria-live="polite">
+        <!-- Los cards se insertan vía JS -->
+      </div>
 
-            <!-- Project 3 -->
-            <div class="portfolio-item">
-                <a href="https://makaluvye.web.app/" target="_blank" rel="noopener noreferrer" class="image-link">
-                    <img class="portfolio-img" src="images/viajes.png" alt="Sitio web de agencia de viajes">
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Web</span>
-                        <h3 class="portfolio-title">Agencia de Viajes</h3>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="portfolio-item">
-                <a href="https://github.com/GmzQzvZ/ticket-administrator" target="_blank" rel="noopener noreferrer" class="image-link">
-                    <img class="portfolio-img" src="images/task.png" alt="Aplicación de administración de tickets">
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Web</span>
-                        <h3 class="portfolio-title">Ticket Administrator</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
+      <div id="githubError" class="text-danger small mt-3 d-none" role="alert" aria-live="assertive"></div>
     </div>
+  </div>
 </section>
 
 
@@ -418,7 +386,11 @@
     <div class="py-4 my-4">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <form id="miniContactForm" class="row g-3">
+          <form id="miniContactForm" class="row g-3" action="https://formsubmit.co/zvzgmzq@gmail.com" method="POST" target="_blank">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="source" value="Portafolio web">
             <div class="col-md-6">
               <label for="contactName" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="contactName" name="name" placeholder="Tu nombre" required>
@@ -434,6 +406,9 @@
             <div class="col-12 d-flex gap-2">
               <button type="submit" class="btn btn-primary"><i class="ti ti-send"></i> Enviar</button>
               <button type="reset" class="btn btn-outline-secondary"><i class="ti ti-rotate"></i> Limpiar</button>
+            </div>
+            <div class="col-12">
+              <div id="miniContactFeedback" class="text-center text-muted small mt-3 d-none" role="status" aria-live="polite"></div>
             </div>
           </form>
         </div>
@@ -498,6 +473,11 @@
     </div>
   </div>
 </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Sidebar -->
     <div class="hero-sidebar">
@@ -533,57 +513,10 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- App scripts -->
     <script src="js/script.js"></script>
 
-    <script>
-      // Inicializar AOS
-      AOS.init({
-        once: true,
-        duration: 600,
-        easing: 'ease-out-quart'
-      });
-
-      // Inicializar tooltips de Bootstrap
-      (function () {
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-          new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-      })();
-
-      // Manejo del mini formulario: solo WhatsApp
-      (function () {
-        const form = document.getElementById('miniContactForm');
-        if (!form) return;
-
-        const toWhatsapp = '573229520608'; // Número destino sin signos, con código país
-
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          const name = document.getElementById('contactName').value.trim();
-          const email = document.getElementById('contactEmail').value.trim();
-          const message = document.getElementById('contactMessage').value.trim();
-
-          if (!name || !email || !message) {
-            alert('Por favor completa nombre, email y mensaje.');
-            return;
-          }
-
-          // Construir mensaje base
-          const msg = `Hola Buen DIa, soy ${name}.\n mi correo es: ${email}\n y quiero conversar con tigo de:${message}`;
-
-          // Enviar WhatsApp
-          const waUrl = `https://wa.me/${toWhatsapp}?text=${encodeURIComponent(msg)}`;
-          window.open(waUrl, '_blank');
-
-          // Resetear formulario
-          form.reset();
-        });
-      })();
-    </script>
 </body>
 
 </html>
