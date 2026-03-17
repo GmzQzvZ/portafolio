@@ -238,6 +238,17 @@ a:hover {
   display: none;
 }
 
+.offcanvas-btn i {
+    font-size: 30px;
+    color: var(--body-text-color);
+    transition: color 0.3s ease;
+}
+
+.offcanvas-btn:hover i {
+    color: var(--accent-color);
+}
+
+
 /* Contenido principal deja espacio para sidebar */
 .main-content {
   margin-right: 340px;
@@ -405,7 +416,6 @@ a:hover {
   .skills-list { grid-template-columns: 1fr; }
 }
 
-
 .github-section__inner {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 24px;
@@ -487,4 +497,18 @@ a:hover {
   .github-section__inner {
     padding: 2rem;
   }
+}
+
+/* ───────────────────────────────────────────────
+   Off-Canvas Mobile Menu
+───────────────────────────────────────────────── */
+.offcanvas-body {
+  background-color: var(--secondary-color);
+  color: var(--body-text-color);
+}
+
+.offcanvas-header {
+  background-color: var(--secondary-color);
+  color: var(--body-text-color);
+  border-bottom: 1px solid var(--grey-color);
 }
