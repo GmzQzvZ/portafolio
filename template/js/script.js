@@ -22,6 +22,7 @@
     };
 
     const fallbackToFormSubmit = () => {
+      form.dataset.fallbackTriggered = 'true';
       setTimeout(() => {
         form.submit();
       }, 0);
@@ -40,6 +41,10 @@
     };
 
     form.addEventListener('submit', (event) => {
+      if (form.dataset.fallbackTriggered === 'true') {
+        delete form.dataset.fallbackTriggered;
+        return;
+      }
       event.preventDefault();
       const formData = new FormData(form);
       const name = (formData.get('name') || '').toString().trim();
