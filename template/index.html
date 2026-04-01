@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <link rel="icon" href="images/favicon/icons8-dev-windows-10-96.png" type="image/x-icon">
 
@@ -189,7 +189,7 @@
                             <h2 class="fw-bold">Personal Info</h2>
 
                             <ul class="list-unstyled">
-                                <li><b>Edad:</b> 26 </li>
+                                <li><b>Edad:</b> <span id="currentAge" data-birth-year="2000" data-birth-month="2" data-birth-day="27">26</span></li>
                                 <li><b>Ubicación:</b> Bogotá, Colombia</li>
                                 <li><b>E-mail:</b> zvzgmzq@gmail.com</li>
                                 <li><b>Teléfono:</b> +57 322 952 0608</li>
@@ -276,30 +276,28 @@
                         </section>
 
                     <section id="experiencia-laboral" class="resume-section">
-                        <div class="container">
-                            <div class="section-title">
-                                <div class="py-4 my-4 "></div>
-                                <h2 class="fw-bold pb-4">Experiencia Laboral</h2>
-                            </div>
-                        
-                    <hr class="mid-break my-2"> <!--linea divisoria -->
-                            <div class="timeline">
-                                <div class="timeline-item" data-aos="fade-up">
-                                    <div class="timeline-content">
-                                        <div class="data-info">
-                                            <p class="meta-date">Ene 2022 - Oct 2025 <span class="divider">•</span> <span class="company">Vita Support SAS</span></p>
-                                            <h3 class="info-title">Técnico de Software Junior</h3>
-                                            <p>Liderazgo de área por casi 11 meses, gestionando proyectos y coordinando equipo. Desarrollo de sistemas a medida garantizando seguridad, escalabilidad y cumplimiento de plazos. Documentación técnica y soporte continuo.</p>
-                                        </div>
+                        <div class="section-title">
+                            <div class="py-4 my-4 "></div>
+                            <h2 class="fw-bold pb-4">Experiencia Laboral</h2>
+                        </div>
+
+                        <hr class="mid-break my-2"> <!--linea divisoria -->
+                        <div class="timeline">
+                            <div class="timeline-item" data-aos="fade-up">
+                                <div class="timeline-content">
+                                    <div class="data-info">
+                                        <p class="meta-date">Ene 2022 - Oct 2025 <span class="divider">•</span> <span class="company">Vita Support SAS</span></p>
+                                        <h3 class="info-title">Técnico de Software Junior</h3>
+                                        <p>Liderazgo de área por casi 11 meses, gestionando proyectos y coordinando equipo. Desarrollo de sistemas a medida garantizando seguridad, escalabilidad y cumplimiento de plazos. Documentación técnica y soporte continuo.</p>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-aos="fade-up">
-                                    <div class="timeline-content">
-                                        <div class="data-info">
-                                            <p class="meta-date">Ene 2022 - Jul 2022 <span class="divider">•</span> <span class="company">Aprendiz SENA – FUNDEM PSP</span></p>
-                                            <h3 class="info-title">Desarrollador de Software</h3>
-                                            <p>Pruebas de calidad y validación de desarrollos. Desarrollo de una plataforma educativa desde cero. Elaboración de reportes técnicos para clientes.</p>
-                                        </div>
+                            </div>
+                            <div class="timeline-item" data-aos="fade-up">
+                                <div class="timeline-content">
+                                    <div class="data-info">
+                                        <p class="meta-date">Ene 2022 - Jul 2022 <span class="divider">•</span> <span class="company">Aprendiz SENA – FUNDEM PSP</span></p>
+                                        <h3 class="info-title">Desarrollador de Software</h3>
+                                        <p>Pruebas de calidad y validación de desarrollos. Desarrollo de una plataforma educativa desde cero. Elaboración de reportes técnicos para clientes.</p>
                                     </div>
                                 </div>
                             </div>
@@ -307,13 +305,12 @@
                     </section>
 
                     <section id="education" class="resume-section">
-                    <div class="container">
                         <div class="section-title">
                             <div class="py-4 my-4 "></div>
                             <h2 class="fw-bold pb-4">Educación</h2>
                         </div>
-                    
-                    <hr class="mid-break my-2"> <!--linea divisoria -->
+
+                        <hr class="mid-break my-2"> <!--linea divisoria -->
                         <div class="timeline">
                             <div class="timeline-item" data-aos="fade-up">
                                 <div class="timeline-content">
@@ -343,134 +340,133 @@
                                 </div>
                             </div>
                         </div>
-    </section>
+                    </section>
 
-<section id="portfolio" class="github-section">
-  <div class="container">
-          <h1 class="fw-bold mt-5 mb-1">Portafolio</h1>
-      <p class="lead-paragraph mb-3">
-        Este portafolio se actualiza con lo último de mi perfil
-        <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"
-           class="github-link">GitHub</a>.
-      </p>
-    <div class="github-section__inner py-4 my-4">
+                    <section id="portfolio" class="github-section">
+                        <div class="container">
+                            <h1 class="fw-bold mt-5 mb-1">Portafolio</h1>
+                            <p class="lead-paragraph mb-3">
+                                Este portafolio se actualiza con lo último de mi perfil
+                                <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"
+                                   class="github-link">GitHub</a>.
+                            </p>
+                            <div class="github-section__inner py-4 my-4">
+                                <div id="githubSummary" class="github-summary small text-muted" aria-live="polite">
+                                    Cargando resumen del perfil...
+                                </div>
 
-      <div id="githubSummary" class="github-summary small text-muted" aria-live="polite">
-        Cargando resumen del perfil...
-      </div>
+                                <div id="githubRepos" class="row row-cols-1 row-cols-md-2 g-4 mt-3" aria-live="polite">
+                                    <!-- Los cards se insertan vía JS -->
+                                </div>
 
-      <div id="githubRepos" class="row row-cols-1 row-cols-md-2 g-4 mt-3" aria-live="polite">
-        <!-- Los cards se insertan vía JS -->
-      </div>
-
-      <div id="githubError" class="text-danger small mt-3 d-none" role="alert" aria-live="assertive"></div>
-    </div>
-  </div>
-</section>
+                                <div id="githubError" class="text-danger small mt-3 d-none" role="alert" aria-live="assertive"></div>
+                            </div>
+                        </div>
+                    </section>
 
 
-<section id="contact">
-  <div class="container">
+                    <section id="contact">
+                        <div class="container">
 
-    <!-- Título -->
-    <div class="py-4 my-4">
-      <h1 class="fw-bold mt-5">Contacto</h1>
-      <p>¿Tienes una idea o quieres trabajar conmigo? ¡Hablemos!</p>
-    </div>
+                            <!-- T�tulo -->
+                            <div class="py-4 my-4">
+                                <h1 class="fw-bold mt-5">Contacto</h1>
+                                <p>¿Tienes una idea o quieres trabajar conmigo? ¡Hablemos!</p>
+                            </div>
 
-    <hr class="mid-break my-2"> <!--linea divisoria -->
+                            <hr class="mid-break my-2"> <!--linea divisoria -->
 
-    <!-- Mini Formulario de Contacto -->
-    <div class="py-4 my-4">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form id="miniContactForm" class="row g-3" action="https://formsubmit.co/zvzgmzq@gmail.com" method="POST" target="_blank">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="source" value="Portafolio web">
-            <div class="col-md-6">
-              <label for="contactName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="contactName" name="name" placeholder="Tu nombre" autocomplete="name" required>
-            </div>
-            <div class="col-md-6">
-              <label for="contactEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="contactEmail" name="email" placeholder="tucorreo@dominio.com" autocomplete="email" required>
-            </div>
-            <div class="col-12">
-              <label for="contactMessage" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="Cuéntame brevemente tu idea" required></textarea>
-            </div>
-            <div class="col-12 d-flex gap-2">
-              <button type="submit" class="btn btn-primary"><i class="ti ti-send"></i> Enviar</button>
-              <button type="reset" class="btn btn-outline-secondary"><i class="ti ti-rotate"></i> Limpiar</button>
-            </div>
-            <div class="col-12">
-              <div id="miniContactFeedback" class="text-center text-muted small mt-3 d-none" role="status" aria-live="polite"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+                            <!-- Mini Formulario de Contacto -->
+                            <div class="py-4 my-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <form id="miniContactForm" class="row g-3" action="https://formsubmit.co/zvzgmzq@gmail.com" method="POST" target="_blank">
+                                            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                                            <input type="hidden" name="_captcha" value="false">
+                                            <input type="hidden" name="_template" value="table">
+                                            <input type="hidden" name="source" value="Portafolio web">
+                                            <div class="col-md-6">
+                                                <label for="contactName" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="contactName" name="name" placeholder="Tu nombre" autocomplete="name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="contactEmail" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="tucorreo@dominio.com" autocomplete="email" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="contactMessage" class="form-label">Mensaje</label>
+                                                <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="Cuéntame brevemente tu idea" required></textarea>
+                                            </div>
+                                            <div class="col-12 d-flex gap-2">
+                                                <button type="submit" class="btn btn-primary"><i class="ti ti-send"></i> Enviar</button>
+                                                <button type="reset" class="btn btn-outline-secondary"><i class="ti ti-rotate"></i> Limpiar</button>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="miniContactFeedback" class="text-center text-muted small mt-3 d-none" role="status" aria-live="polite"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
-     <hr class="mid-break my-2"> <!--linea divisoria -->
+                            <hr class="mid-break my-2"> <!--linea divisoria -->
 
-    <!-- Información de contacto -->
-    <div class="py-4 my-4">
-      <div class="row justify-content-around text-center">
+                            <!-- Información de contacto -->
+                            <div class="py-4 my-4">
+                                <div class="row justify-content-around text-center">
 
-        <div class="col-md-4 contact-list mb-3">
-          <i class="ti ti-phone"></i>
-          <p class="contact-paragraph mt-2">+57 322 952 0608</p>
-        </div>
+                                    <div class="col-md-4 contact-list mb-3">
+                                        <i class="ti ti-phone"></i>
+                                        <p class="contact-paragraph mt-2">+57 322 952 0608</p>
+                                    </div>
 
-        <div class="col-md-4 contact-list mb-3">
-          <i class="ti ti-mail"></i>
-          <p class="contact-paragraph mt-2">zvzgmzq@gmail.com</p>
-        </div>
+                                    <div class="col-md-4 contact-list mb-3">
+                                        <i class="ti ti-mail"></i>
+                                        <p class="contact-paragraph mt-2">zvzgmzq@gmail.com</p>
+                                    </div>
 
-        <div class="col-md-4 contact-list mb-3">
-          <i class="ti ti-map-pin"></i>
-          <p class="contact-paragraph mt-2">Bogotá, Colombia</p>
-        </div>
+                                    <div class="col-md-4 contact-list mb-3">
+                                        <i class="ti ti-map-pin"></i>
+                                        <p class="contact-paragraph mt-2">Bogotá, Colombia</p>
+                                    </div>
 
-      </div>
-    </div>
+                                </div>
+                            </div>
 
-     <hr class="mid-break my-2"> <!--linea divisoria -->
+                            <hr class="mid-break my-2"> <!--linea divisoria -->
 
-    <!-- Redes -->
-    <div class="py-4 my-4">
-      <h2 class="fw-bold pb-4 text-center">Redes Sociales</h2>
+                            <!-- Redes -->
+                            <div class="py-4 my-4">
+                                <h2 class="fw-bold pb-4 text-center">Redes Sociales</h2>
 
-      <div class="row justify-content-around text-center">
-        <div class="col-md-3 mb-3">
-        <i class="ti ti-brand-github"></i>
-          <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"
-             class="btn btn-outline-primary btn-lg w-100">GitHub</a>
-        </div>
+                                <div class="row justify-content-around text-center">
+                                    <div class="col-md-3 mb-3">
+                                        <i class="ti ti-brand-github"></i>
+                                        <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"
+                                           class="btn btn-outline-primary btn-lg w-100">GitHub</a>
+                                    </div>
 
-        <div class="col-md-3 mb-3">
-        <i class="ti ti-brand-linkedin"></i>
-          <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-outline-primary btn-lg w-100">LinkedIn</a>
-        </div>
+                                    <div class="col-md-3 mb-3">
+                                        <i class="ti ti-brand-linkedin"></i>
+                                        <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/"
+                                           target="_blank" rel="noopener noreferrer"
+                                           class="btn btn-outline-primary btn-lg w-100">LinkedIn</a>
+                                    </div>
 
-        <div class="col-md-3 mb-3">
-        <i class="ti ti-brand-whatsapp"></i>
-          <a href="https://wa.link/oqpuez" target="_blank" rel="noopener noreferrer"
-             class="btn btn-outline-primary btn-lg w-100">WhatsApp</a>
-        </div>
+                                    <div class="col-md-3 mb-3">
+                                        <i class="ti ti-brand-whatsapp"></i>
+                                        <a href="https://wa.link/oqpuez" target="_blank" rel="noopener noreferrer"
+                                           class="btn btn-outline-primary btn-lg w-100">WhatsApp</a>
+                                    </div>
 
-        <div class="col-md-3 mb-3">
-        <i class="ti ti-mail"></i>
-          <a href="mailto:zvzgmzq@gmail.com" class="btn btn-outline-primary btn-lg w-100">Email</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                                    <div class="col-md-3 mb-3">
+                                        <i class="ti ti-mail"></i>
+                                        <a href="mailto:zvzgmzq@gmail.com" class="btn btn-outline-primary btn-lg w-100">Email</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     </div>
                 </div>
             </div>
@@ -501,7 +497,7 @@
                     </a>
                 </div>
                 
-                <p class="text-muted small mb-0"> 2025 Sebastián Gomez</p>
+                <p class="text-muted small mb-0"><span id="currentYear">2025</span> Sebastián Gomez</p>
             </div>
         </header>
     </div>
@@ -518,3 +514,6 @@
 </body>
 
 </html>
+
+
+

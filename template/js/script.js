@@ -167,19 +167,29 @@
       return col;
     };
 
+    let profileData = null;
+    let lastUpdatedOverride = null;
+
+    const renderSummary = () => {
+      if (!profileData) return;
+      const dateLabel = lastUpdatedOverride || safeDate(profileData.updated_at);
+      summaryEl.innerHTML = `
+        <strong>${profileData.name || profileData.login}</strong> •
+        ${profileData.public_repos} repositorios públicos •
+        ${profileData.followers} seguidores.
+        <br>
+        Última actualización: ${dateLabel}.
+      `;
+    };
+
     fetch(`https://api.github.com/users/${user}`)
       .then((res) => {
         if (!res.ok) throw new Error('Perfil de GitHub no disponible');
         return res.json();
       })
       .then((profile) => {
-        summaryEl.innerHTML = `
-          <strong>${profile.name || profile.login}</strong> •
-          ${profile.public_repos} repositorios públicos •
-          ${profile.followers} seguidores.
-          <br>
-          Última actualización: ${safeDate(profile.updated_at)}.
-        `;
+        profileData = profile;
+        renderSummary();
       })
       .catch((err) => {
         summaryEl.textContent = 'No se pudo cargar el resumen del perfil.';
@@ -199,11 +209,48 @@
 
         reposEl.innerHTML = '';
         repos.forEach((repo) => reposEl.appendChild(createRepoCard(repo)));
+        const repoUpdates = repos
+          .map((repo) => repo.updated_at)
+          .filter(Boolean);
+        if (repoUpdates.length > 0) {
+          const latestRepoUpdate = repoUpdates.reduce((latest, current) => {
+            const latestDate = new Date(latest);
+            const currentDate = new Date(current);
+            return currentDate > latestDate ? current : latest;
+          }, repoUpdates[0]);
+          lastUpdatedOverride = safeDate(latestRepoUpdate);
+          renderSummary();
+        }
       })
       .catch((err) => {
         reposEl.innerHTML = '<p class="text-muted">No se pudieron cargar los repositorios.</p>';
         setError(err.message);
       });
+  };
+
+  const updateDynamicMeta = () => {
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    const ageEl = document.getElementById('currentAge');
+    if (ageEl) {
+      const birthYear = Number(ageEl.dataset.birthYear);
+      const birthMonth = Number(ageEl.dataset.birthMonth || 0);
+      const birthDay = Number(ageEl.dataset.birthDay || 1);
+      if (Number.isFinite(birthYear)) {
+        const today = new Date();
+        let age = today.getFullYear() - birthYear;
+        if (
+          today.getMonth() < birthMonth ||
+          (today.getMonth() === birthMonth && today.getDate() < birthDay)
+        ) {
+          age -= 1;
+        }
+        ageEl.textContent = age;
+      }
+    }
   };
 
   const ready = (callback) => {
@@ -215,6 +262,7 @@
   };
 
   ready(() => {
+    updateDynamicMeta();
     initContactForm();
     initTooltips();
     initAOS();
