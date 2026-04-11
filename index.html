@@ -133,6 +133,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="#certificates" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                                aria-label="Certificados" data-bs-original-title="Certificados">
+                                <i class="ti ti-certificate"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#portfolio" class="nav-link rounded-0" data-bs-toggle="tooltip"
                                 data-bs-placement="right" aria-label="Portafolio" data-bs-original-title="Portafolio">
                                 <i class="ti ti-brand-github"></i>
@@ -341,6 +347,77 @@
                         </div>
                     </section>
 
+                    <section id="certificates" class="resume-section">
+                        <div class="section-title">
+                            <div class="py-4 my-4 "></div>
+                            <h2 class="fw-bold pb-4">Certificados y Diplomas</h2>
+                        </div>
+
+                        <hr class="mid-break my-2"> <!--linea divisoria -->
+                        
+                        <div class="row g-4 mt-2">
+                            <!-- Git Certificate -->
+                            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                                <div class="cert-card">
+                                    <a href="https://github.com/GmzQzvZ" target="_blank" class="cert-link">
+                                        <div class="cert-img-wrapper" style="background: linear-gradient(45deg, #f0503222, #f0503255);">
+                                            <i class="ti ti-brand-git" style="font-size: 4rem; color: #f05032;"></i>
+                                            <div class="cert-overlay">
+                                                <span class="btn btn-light btn-sm">
+                                                    <i class="ti ti-external-link"></i> Ver en GitHub
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="cert-info">
+                                        <h4 class="h5 fw-bold mb-1">Git y Control de Versiones</h4>
+                                        <p class="small text-muted mb-0">Certificación de Estado</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HTML Certificate -->
+                            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="cert-card">
+                                    <a href="https://drive.google.com/file/d/1Q8ThZoFWe3OkxUQ_ot4cCkU27T3O1HS9/view?usp=sharing" target="_blank" class="cert-link">
+                                        <div class="cert-img-wrapper" style="background: linear-gradient(45deg, #e34c2622, #e34c2655);">
+                                            <i class="ti ti-brand-html5" style="font-size: 4rem; color: #e34c26;"></i>
+                                            <div class="cert-overlay">
+                                                <span class="btn btn-light btn-sm">
+                                                    <i class="ti ti-file-certificate"></i> Ver Diploma
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="cert-info">
+                                        <h4 class="h5 fw-bold mb-1">HTML desde Cero</h4>
+                                        <p class="small text-muted mb-0">Curso Completo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Diploma Técnico -->
+                            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="cert-card">
+                                    <a href="https://drive.google.com/file/d/1XBE43WWBBBCN-IZRMxOANdrs_ZQL0w4p/view?usp=sharing" target="_blank" class="cert-link">
+                                        <div class="cert-img-wrapper" style="background: linear-gradient(45deg, #4A90E222, #4A90E255);">
+                                            <i class="ti ti-school" style="font-size: 4rem; color: var(--accent-color);"></i>
+                                            <div class="cert-overlay">
+                                                <span class="btn btn-light btn-sm">
+                                                    <i class="ti ti-file-certificate"></i> Ver Diploma
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="cert-info">
+                                        <h4 class="h5 fw-bold mb-1">Diploma Técnico</h4>
+                                        <p class="small text-muted mb-0">SENA - Programación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="portfolio" class="github-section">
                         <div class="container">
                             <h1 class="fw-bold mt-5 mb-1">Portafolio</h1>
@@ -505,6 +582,21 @@
                 <p class="text-muted small mb-0"><span id="currentYear">2025</span> Sebastián Gomez</p>
             </div>
         </header>
+    </div>
+
+    <!-- Modal para ver certificados -->
+    <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="certModalLabel">Diploma</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <img id="modalCertImg" src="" alt="Diploma Full Size" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- JS: Bootstrap, AOS, App -->
