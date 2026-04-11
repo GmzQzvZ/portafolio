@@ -178,7 +178,6 @@
         ${profileData.public_repos} repositorios públicos •
         ${profileData.followers} seguidores.
         <br>
-        Última actualización: ${dateLabel}.
       `;
     };
 
