@@ -6,7 +6,7 @@
     const feedbackEl = document.getElementById('miniContactFeedback');
     if (!form || !feedbackEl) return;
 
-    const toWhatsapp = '573229520608';
+    const toWhatsapp = '573004090488';
     const waFallbackUrl = `https://wa.me/${toWhatsapp}?text=${encodeURIComponent(
       'Hola, quiero contarte algo desde tu portafolio.'
     )}`;
@@ -177,7 +177,6 @@
         <strong>${profileData.name || profileData.login}</strong> •
         ${profileData.public_repos} repositorios públicos •
         ${profileData.followers} seguidores.
-        <br>
       `;
     };
 
