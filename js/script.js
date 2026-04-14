@@ -228,9 +228,10 @@
 
   const updateDynamicMeta = () => {
     const yearEl = document.getElementById('currentYear');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+    const yearFooterEl = document.getElementById('currentYearFooter');
+    const currentYear = new Date().getFullYear();
+    if (yearEl) yearEl.textContent = currentYear;
+    if (yearFooterEl) yearFooterEl.textContent = currentYear;
 
     const ageEl = document.getElementById('currentAge');
     if (ageEl) {
@@ -265,5 +266,27 @@
     initTooltips();
     initAOS();
     initGitHubFeed();
+
+    // Mobile nav active state
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      mobileLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
   });
 })();

@@ -61,52 +61,31 @@
 
     <!-- Contenido principal -->
     <div class="main-content">
-        <div class="offcanvas-btn text-end m-3">
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight" aria-label="Abrir menú">
-                <i class="ti ti-menu-2"></i>
-            </button>
-        </div>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Cerrar"></button>
+        <!-- Mini Menú Móvil -->
+        <nav class="mobile-nav d-xl-none">
+            <div class="mobile-nav-container">
+                <a href="#home" class="mobile-nav-link active">
+                    <i class="ti ti-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#about" class="mobile-nav-link">
+                    <i class="ti ti-user"></i>
+                    <span>Sobre mí</span>
+                </a>
+                <a href="#resume" class="mobile-nav-link">
+                    <i class="ti ti-school"></i>
+                    <span>Técnico</span>
+                </a>
+                <a href="#portfolio" class="mobile-nav-link">
+                    <i class="ti ti-brand-github"></i>
+                    <span>Portafolio</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link">
+                    <i class="ti ti-phone"></i>
+                    <span>Contacto</span>
+                </a>
             </div>
-            <div class="offcanvas-body">
-                <header class="hero position-fixed">
-                    <div class="container hero-container text-center align-content-between">
-
-                        <div>
-                            <img src="images/sin.png" class="hero-img mb-4 rounded-circle" alt="Sebastián Gómez"
-                                width="140" height="140" loading="lazy">
-
-                            <h2 class="fw-bold">Sebastián Gómez</h2>
-                            <p>Desarrollador Web App | Apasionado por la tecnología</p>
-
-                            <div class="social-icon my-4">
-                                <a href="https://github.com/GmzQzvZ" class="social-link" target="_blank"
-                                    rel="noopener noreferrer" aria-label="GitHub">
-                                    <i class="ti ti-brand-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/"
-                                    class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <i class="ti ti-brand-linkedin"></i>
-                                </a>
-                                <a href="https://wa.link/oqpuez" class="social-link" target="_blank"
-                                    rel="noopener noreferrer" aria-label="WhatsApp">
-                                    <i class="ti ti-brand-whatsapp"></i>
-                                </a>
-                                <a href="mailto:zvzgmzq@gmail.com" class="social-link" aria-label="Email">
-                                    <i class="ti ti-mail"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </header>
-            </div>
-        </div>
+        </nav>
 
         <div class="container-fluid">
             <div class="row">
@@ -163,7 +142,7 @@
 
                 </section>
 
-                <div class="col-xl-6 offset-xl-2">
+                <div class="col-xl-8 offset-xl-1 col-lg-10 offset-lg-1">
                     <div class="container content-container">
 
                         <section id="home" class="mt-0">
@@ -597,6 +576,22 @@
                                 </div>
                             </div>
                         </section>
+
+                        <footer class="footer py-5 mt-5">
+                            <div class="container text-center">
+                                <div class="footer-logo mb-4">
+                                    <img src="images/logo.png" alt="Sebastián Gómez" class="footer-logo-img">
+                                </div>
+                                <div class="footer-socials mb-4">
+                                    <a href="https://github.com/GmzQzvZ" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+                                    <a href="https://wa.link/oqpuez" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-whatsapp"></i></a>
+                                </div>
+                                <p class="text-muted small">&copy; <span id="currentYearFooter">2025</span> Sebastián Gómez. Todos los derechos reservados.</p>
+                                <p class="text-primary-gradient small fw-bold">Desarrollado con pasión desde Bogotá</p>
+                            </div>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
@@ -605,35 +600,32 @@
 
     <!-- Sidebar -->
     <div class="hero-sidebar">
-        <header class="hero">
-            <div class="hero-container text-center my-4 pt-3">
+        <div class="hero-container text-center my-4 pt-3">
 
-                <img src="images/sin.png" class="hero-img mb-4 rounded-circle" alt="Sebastián Gómez" width="160"
-                    height="160">
-                <h2 class="fw-bold mt-3">Sebastián Gómez</h2>
-                <p>Desarrollador Web App | Apasionado por la tecnología</p>
+            <img src="images/sin.png" class="hero-img mb-4 rounded-circle" alt="Sebastián Gómez" width="160"
+                height="160">
+            <h2 class="fw-bold mt-3">Sebastián Gómez</h2>
+            <p>Desarrollador Web App | Apasionado por la tecnología</p>
 
-                <div class="social-icon my-4">
-                    <a href="https://github.com/GmzQzvZ" class="social-link" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub">
-                        <i class="ti ti-brand-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/"
-                        class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="ti ti-brand-linkedin"></i>
-                    </a>
-                    <a href="https://wa.link/oqpuez" class="social-link" target="_blank" rel="noopener noreferrer"
-                        aria-label="WhatsApp">
-                        <i class="ti ti-brand-whatsapp"></i>
-                    </a>
-                    <a href="mailto:zvzgmzq@gmail.com" class="social-link" aria-label="Email">
-                        <i class="ti ti-mail"></i>
-                    </a>
-                </div>
-
-                <p class="text-muted small mb-0"><span id="currentYear">2025</span> Sebastián Gomez</p>
+            <div class="social-icon my-4">
+                <a href="https://github.com/GmzQzvZ" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <i class="ti ti-brand-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-sebastian-gomez-qui%C3%B1ones-439a502b8/"
+                    class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="ti ti-brand-linkedin"></i>
+                </a>
+                <a href="https://wa.link/oqpuez" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="WhatsApp">
+                    <i class="ti ti-brand-whatsapp"></i>
+                </a>
+                <a href="mailto:zvzgmzq@gmail.com" class="social-link" aria-label="Email">
+                    <i class="ti ti-mail"></i>
+                </a>
             </div>
-        </header>
+
+        </div>
     </div>
 
     <!-- Modal para ver certificados -->
