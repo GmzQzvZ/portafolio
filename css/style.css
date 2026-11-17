@@ -45,7 +45,7 @@ section {
   padding: 32px 0;
 }
 
-.content-container > section {
+.content-container>section {
   margin-bottom: 1rem;
 }
 
@@ -71,21 +71,45 @@ section h2::after {
 /* ───────────────────────────────────────────────
    Tipografía base
 ───────────────────────────────────────────────── */
-h1, .h1 { font-size: 4.4rem; font-weight: 800; margin: 0.3em 0; }
-h2, .h2 { font-size: 2.6rem; font-weight: 700; margin: 0.7em 0 0.5em; }
-h3, .h3 { font-size: 1.7rem; font-weight: 600; }
-h4, .h4 { font-size: 1.4rem; font-weight: 600; margin: 1em 0 0.5em; }
+h1,
+.h1 {
+  font-size: 4.4rem;
+  font-weight: 800;
+  margin: 0.3em 0;
+}
+
+h2,
+.h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0.7em 0 0.5em;
+}
+
+h3,
+.h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1em 0 0.5em;
+}
 
 p {
   color: var(--light-text-color);
   font-size: 1.05rem;
   line-height: 1.75;
+  text-align: justify;
 }
 
 .lead-paragraph {
   font-size: 1.3rem;
   line-height: 1.8;
   color: #d1d9e0;
+  text-align: justify;
 }
 
 a {
@@ -104,11 +128,13 @@ a:hover {
 .navigation {
   position: fixed;
   left: 20px;
-  top: 30px;                    /* distancia desde arriba */
+  top: 30px;
+  /* distancia desde arriba */
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;      /* alineado a la izquierda */
+  align-items: flex-start;
+  /* alineado a la izquierda */
 }
 
 .nav-pills {
@@ -118,7 +144,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;                  /* espacio entre iconos */
+  gap: 1.1rem;
+  /* espacio entre iconos */
 }
 
 .nav-link {
@@ -170,6 +197,8 @@ a:hover {
   text-align: center;
   scrollbar-width: thin;
   scrollbar-color: rgba(74, 144, 226, 0.25) transparent;
+  /* No bloquear clics en el contenido principal */
+  pointer-events: none;
 }
 
 .hero-sidebar::-webkit-scrollbar {
@@ -198,6 +227,8 @@ a:hover {
   box-shadow: 0 0 30px rgba(74, 144, 226, 0.28);
   margin-bottom: 1.8rem;
   transition: transform 0.4s ease;
+  pointer-events: auto;
+  /* La imagen puede ser interactuada */
 }
 
 .hero-sidebar .hero-img:hover {
@@ -210,7 +241,7 @@ a:hover {
   color: white;
 }
 
-.hero-sidebar > p {
+.hero-sidebar>p {
   color: rgba(225, 232, 237, 0.84);
   font-size: 1.08rem;
   margin-bottom: 2.2rem;
@@ -224,22 +255,26 @@ a:hover {
   margin: 1.8rem 0 3rem;
   position: relative;
   z-index: 999;
+  pointer-events: auto;
+  /* Restaurar clics en los iconos sociales */
 }
 
 .social-link {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   color: white;
   font-size: 1.45rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,0.09);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   transition: all 0.3s ease;
-    position: relative;
+  position: relative;
   z-index: 1000;
+  pointer-events: auto;
+  /* Asegurar que los links sean clickables */
 }
 
 .social-link:hover {
@@ -249,7 +284,8 @@ a:hover {
 }
 
 /* Botón hamburguesa (solo móvil) */
-.offcanvas-btn { display: none !important; 
+.offcanvas-btn {
+  display: none !important;
   position: fixed;
   top: 1.2rem;
   right: 1.2rem;
@@ -258,27 +294,31 @@ a:hover {
 }
 
 .offcanvas-btn i {
-    font-size: 30px;
-    color: var(--body-text-color);
-    transition: color 0.3s ease;
+  font-size: 30px;
+  color: var(--body-text-color);
+  transition: color 0.3s ease;
 }
 
 .offcanvas-btn:hover i {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 
 /* Contenido principal deja espacio para sidebar y nav izquierda */
 .main-content {
-  margin-right: 340px;
-  margin-left: 90px; /* espacio para la nav izquierda fija */
+  margin-right: 450px;
+  margin-left: 220px;
   min-height: 100vh;
 }
 
 .content-container {
   max-width: 100% !important;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0;
+}
+
+.content-wrapper {
+  padding-left: 40px;
+  padding-right: 150px;
 }
 
 /* ───────────────────────────────────────────────
@@ -308,7 +348,7 @@ a:hover {
 .skills-list h4:hover {
   background: rgba(74, 144, 226, 0.15);
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skills-list .ti {
@@ -371,28 +411,35 @@ a:hover {
   }
 }
 
-/* Responsive Adjustments */
+
 /* ───────────────────────────────────────────────
    Contacto
 ───────────────────────────────────────────────── */
 .contact-list {
   padding: 2rem;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.09);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   transition: all 0.35s ease;
+  
 }
 
 .contact-list:hover {
   transform: translateY(-8px);
   background: rgba(74, 144, 226, 0.09);
   border-color: var(--accent-color);
+  
 }
 
 .contact-list i {
   font-size: 2.8rem;
   color: var(--accent-color);
   margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact-paragraph.mt-2{
+  text-align: center;
 }
 
 /* ───────────────────────────────────────────────
@@ -414,12 +461,16 @@ a:hover {
     margin-left: 0;
   }
 
-  .navigation {
-    display: none;
+  .content-container,
+  .content-wrapper,
+  section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 
   section {
-    padding: 28px 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   #home {
@@ -429,14 +480,32 @@ a:hover {
 }
 
 @media (max-width: 991px) {
-  h1, .h1 { font-size: 3.6rem; }
-  h2, .h2 { font-size: 2.3rem; }
+
+  h1,
+  .h1 {
+    font-size: 3.6rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2.3rem;
+  }
 }
 
 @media (max-width: 576px) {
-  h1, .h1 { font-size: 3rem; }
-  .lead-paragraph { font-size: 1.15rem; }
-  .skills-list { grid-template-columns: 1fr; }
+
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .lead-paragraph {
+    font-size: 1.15rem;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .github-section__inner {
@@ -684,13 +753,13 @@ a:hover {
     background: rgba(13, 17, 23, 0.4);
     backdrop-filter: none;
   }
-  
+
   .cert-overlay .btn {
     transform: translateY(0);
     padding: 0.5rem 1rem !important;
     font-size: 0.75rem !important;
   }
-  
+
   .cert-card:hover {
     transform: translateY(-8px);
   }
@@ -714,7 +783,8 @@ a:hover {
   margin-top: 1rem;
   box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
   cursor: pointer;
-  pointer-events: none; /* Let the parent link handle the click */
+  pointer-events: none;
+  /* Let the parent link handle the click */
 }
 
 .cert-card:hover .cert-btn {
@@ -834,9 +904,49 @@ a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.footer p {
+  text-align: center;
+}
+
 /* Responsive adjust for footer on mobile */
 @media (max-width: 1199px) {
   .footer {
-    padding-bottom: 90px !important; /* Space for mobile nav */
+    padding-bottom: 90px !important;
+    /* Space for mobile nav */
+  }
+}
+
+/* ───────────────────────────────────────────────
+   Ajustes añadidos en la revisión
+───────────────────────────────────────────────── */
+
+/* Texto alineado a la izquierda en tarjetas (el justificado global abre huecos en columnas angostas) */
+.service-card p,
+.github-card p {
+  text-align: left;
+}
+
+/* Foco visible para navegación con teclado */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Respeta a quien desactiva las animaciones en su sistema */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .service-card:hover,
+  .github-card:hover,
+  .contact-list:hover {
+    transform: none;
   }
 }
